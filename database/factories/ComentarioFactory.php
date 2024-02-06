@@ -17,7 +17,7 @@ class ComentarioFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'contenido' => fake()->paragraph(),
         ];
     }
 }
