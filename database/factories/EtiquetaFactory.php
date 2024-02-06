@@ -17,7 +17,7 @@ class EtiquetaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'etiqueta' => fake()->unique()->word(),
         ];
     }
 }

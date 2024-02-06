@@ -17,7 +17,10 @@ class NoticiaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'titulo' => fake()->sentence(),
+            'descripcion' => fake()->paragraph(),
+            'url' => fake()->url(),
+            'imagen_url' => fake()->url(),
         ];
     }
 }
