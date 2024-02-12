@@ -21,6 +21,13 @@ class ProfileTest extends TestCase
         $response->assertOk();
     }
 
+    public function test_usuario_invitado_no_tiene_perfil(): void
+    {
+        $response = $this->get('/profile');
+
+        $response->assertRedirect('/login');
+    }
+
     public function test_profile_information_can_be_updated(): void
     {
         $user = User::factory()->create();
